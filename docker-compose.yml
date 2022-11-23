@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  lineage:
+    image: lineage
+    build: ./
+    command: tail -F anything
+    container_name: lineage
+    volumes:
+      - ./build:/home/build/android:Z
+      - ./ccache:/home/build/ccache:Z
